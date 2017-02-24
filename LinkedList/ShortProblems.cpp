@@ -38,8 +38,10 @@ void sampleTimeFormatChanges(){
             time.erase(0,2);
     
             num = stoi(str2); //str2 as int;
+        
+        if (num!=12) {
             num += 12;
-    
+        }
     
             string s = to_string(num);
 
@@ -49,22 +51,29 @@ void sampleTimeFormatChanges(){
     }
     else if (foundAM!=string::npos){
         time.erase(foundAM,time.size());
-//        string str2 = time.substr (0,2);
-//        time.erase(0,2);
-//        
-//        num = stoi(str2); //str2 as int;
-//        num -= 12;
-//        
-//        string s = to_string(num);
-//        if (num ==0) {
-//            s = "00";
-//        }
-//        time.insert(0, s);
+        string str2 = time.substr (0,2);
+        
+        num = stoi(str2); //str2 as int;
+        if (num>=12) {
+            time.erase(0,2);
+            num -= 12;
+            
+            string s = to_string(num);
+            if (num == 0) {
+                s = "00";
+            }
+            time.insert(0, s);
+        }
+        
+        
         cout<<time<<endl;
         
     }
- 
- }
+}
+
+int main(){
+    sampleTimeFormatChanges();
+}
 
 
 //--------------------------------------------------//
