@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		46406D961E51ECC400DD640F /* LinkedList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46406D951E51ECC400DD640F /* LinkedList.cpp */; };
+		46A13C681E607D5000B8FF62 /* OperatorOverloading.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46A13C671E607D5000B8FF62 /* OperatorOverloading.cpp */; };
+		46A13C6A1E607DA600B8FF62 /* ShortProblems.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46A13C691E607DA600B8FF62 /* ShortProblems.cpp */; };
 		46EE7B421E53665B00FF0A26 /* DoublyLinkedList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46EE7B411E53665B00FF0A26 /* DoublyLinkedList.cpp */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +28,8 @@
 /* Begin PBXFileReference section */
 		46406D921E51ECC400DD640F /* LinkedList */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LinkedList; sourceTree = BUILT_PRODUCTS_DIR; };
 		46406D951E51ECC400DD640F /* LinkedList.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LinkedList.cpp; sourceTree = "<group>"; };
+		46A13C671E607D5000B8FF62 /* OperatorOverloading.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OperatorOverloading.cpp; sourceTree = "<group>"; };
+		46A13C691E607DA600B8FF62 /* ShortProblems.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ShortProblems.cpp; sourceTree = "<group>"; };
 		46EE7B411E53665B00FF0A26 /* DoublyLinkedList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DoublyLinkedList.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -59,7 +63,9 @@
 		46406D941E51ECC400DD640F /* LinkedList */ = {
 			isa = PBXGroup;
 			children = (
+				46A13C671E607D5000B8FF62 /* OperatorOverloading.cpp */,
 				46406D951E51ECC400DD640F /* LinkedList.cpp */,
+				46A13C691E607DA600B8FF62 /* ShortProblems.cpp */,
 				46EE7B411E53665B00FF0A26 /* DoublyLinkedList.cpp */,
 			);
 			path = LinkedList;
@@ -123,6 +129,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				46406D961E51ECC400DD640F /* LinkedList.cpp in Sources */,
+				46A13C681E607D5000B8FF62 /* OperatorOverloading.cpp in Sources */,
+				46A13C6A1E607DA600B8FF62 /* ShortProblems.cpp in Sources */,
 				46EE7B421E53665B00FF0A26 /* DoublyLinkedList.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
