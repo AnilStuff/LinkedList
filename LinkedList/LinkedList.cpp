@@ -9,6 +9,7 @@
 #include <iostream>
 #include "String"
 
+#define EXIT 10
 using namespace std;
 
 class Node{
@@ -61,6 +62,9 @@ public:
     
     //To get middle element of the list
     int getMiddleElement();
+    
+    //To reverse the linked list
+    void reverseList();
 };
 
 
@@ -95,8 +99,7 @@ void List :: insertNodeAfterNodeData(int existingValue, int newValue){
     while (iteratorPtr != NULL) {
         
         if (iteratorPtr->getData() == existingValue) {
-//            Node *node = iteratorPtr->getNextNode();
-            tempNode->setNextNode(iteratorPtr->getNextNode());
+             tempNode->setNextNode(iteratorPtr->getNextNode());
             iteratorPtr->setNextNode(tempNode);
             iteratorPtr = tempNode;
 
@@ -106,6 +109,36 @@ void List :: insertNodeAfterNodeData(int existingValue, int newValue){
         
     }
     
+    
+}
+
+
+void List :: reverseList(){
+    Node *iteratorPtr = head;
+    Node *result = NULL;
+    Node *next = NULL;
+
+    
+    if (iteratorPtr != NULL) {
+        if (iteratorPtr->getNextNode() != NULL) {
+            next = iteratorPtr->getNextNode();
+        }
+        result = iteratorPtr;
+        result->setNextNode(NULL);
+    }
+    
+    
+    while  (next != NULL) {
+        
+        iteratorPtr = next;
+        next = iteratorPtr->getNextNode();
+        
+        iteratorPtr->setNextNode(result);
+        result = iteratorPtr;
+
+    }
+
+    head = result;
     
 }
 void List :: appendData(int data){
@@ -274,7 +307,7 @@ void List:: popLastNode(){
 }
 
 
-/*
+
 int main(int argc, const char * argv[]) {
     
     int ch;
@@ -283,15 +316,14 @@ int main(int argc, const char * argv[]) {
 
     List list = *new List();
     
-    list.appendData(13);
-    list.appendData(532);
-    list.appendData(23);
-    list.appendData(52);
-    list.appendData(522);
-    list.appendData(522);
+    list.appendData(1);
+    list.displayList();
+    cout<< "------------------------------------------------"<<endl;
+    list.reverseList();
     list.displayList();
 
-    while (ch != 9) {
+
+    while (ch != EXIT) {
         cout<< "------------------------------------------------"<<endl;
         cout<< "Enter 1 to append data in list"<<endl;
         cout<< "Enter 2 to get value at particular location"<<endl;
@@ -301,7 +333,8 @@ int main(int argc, const char * argv[]) {
         cout<< "Enter 6 to search specific element in list"<<endl;
         cout<< "Enter 7 to insert specific element at location in list"<<endl;
         cout<< "Enter 8 to Find middle element of list"<<endl;
-        cout<< "Enter 9 to exit"<<endl;
+        cout<< "Enter 9 to reverse the linked list"<<endl;
+        cout<< "Enter 10 to exit"<<endl;
         cout<< "-- ----------------------------------------------"<<endl;
 
         cin >> ch;
@@ -351,11 +384,16 @@ int main(int argc, const char * argv[]) {
                 cout<<"Middle Element is  "<<list.getMiddleElement()<<endl;
             }
             break;
-            case 9:
+                
+            case 9:{
+                list.reverseList();
+            }
+                break;
+            case EXIT:
                 exit(0);
                 break;
         }
     }
     
     return 0;
-}*/
+}
