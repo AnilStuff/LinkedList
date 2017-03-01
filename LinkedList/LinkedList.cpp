@@ -13,6 +13,7 @@
 using namespace std;
 
 class Node{
+    
     int data;
 
     Node *nextNode;
@@ -307,7 +308,7 @@ void List:: popLastNode(){
 }
 
 
-
+/*
 int main(int argc, const char * argv[]) {
     
     int ch;
@@ -317,6 +318,9 @@ int main(int argc, const char * argv[]) {
     List list = *new List();
     
     list.appendData(1);
+    list.appendData(12);
+    list.appendData(13);
+
     list.displayList();
     cout<< "------------------------------------------------"<<endl;
     list.reverseList();
@@ -397,3 +401,4 @@ int main(int argc, const char * argv[]) {
     
     return 0;
 }
+*/
