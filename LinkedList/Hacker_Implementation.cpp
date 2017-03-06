@@ -91,12 +91,11 @@ int squareRoot(float num, float low, float high, float mid){
     }
     else {
         return mid;
-
      }
 
  }
 
-int main7(){
+int mainHunt(){
     int n;
     cin>>n;
     
@@ -297,7 +296,7 @@ int mainyjk(){
     return 0;
 }
 
-
+/*
 int main(){
     int M ,N,k;
     cin>>M;
@@ -337,6 +336,6 @@ int main(){
     
  }
 
-
+*/
 
 

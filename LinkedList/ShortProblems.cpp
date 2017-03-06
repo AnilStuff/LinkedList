@@ -185,8 +185,8 @@ void checkString(string s) {
 }
 
 
-/*
-int main(){
+
+int main23(){
     
     signed int n;
     cin>>n;
@@ -214,7 +214,7 @@ int main(){
     return 0;
 }
 
-*/
+ 
 
 
 int main8() {
