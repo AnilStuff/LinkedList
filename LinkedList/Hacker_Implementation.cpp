@@ -14,7 +14,7 @@
 #define ABS(x) (x >0) ? x : -x
 
 using namespace std;
-/*
+
 int reversed(int num){
     
     vector<int> reverseArr;
@@ -37,8 +37,7 @@ int reversed(int num){
         MultiplicationFactor /= 10;
     }
     
-//    cout<<endl;
-    return reversedNumber;
+     return reversedNumber;
 }
 
 int main(){
@@ -74,26 +73,27 @@ int main(){
 //Return square root or less value
 int squareRoot(float num, float low, float high, float mid){
  
-    cout<<"low "<<low<<"high "<<high<<"mid "<<mid<<"num "<<num<<endl;
-    
-    double scale = 0.1;  // i.e. round to nearest one-tenth
-    
-    
-    if ((int)(mid/scale)*scale== (int)(low/scale)*scale && (int)(high/scale)*scale==(int)(mid/scale)*scale) {
-        return mid;
+     {
+        if (high >= low)
+        {
+            int mid = low + (high - low)/2;
+            
+            // If the element is present at the middle itself
+            if (mid*mid == num)  return mid;
+            
+            // If element is smaller than mid, then it can only be present
+            // in left subarray
+            if (mid*mid > num) return squareRoot(num, low, mid-1, searchNo);
+            
+            // Else the element can only be present in right subarray
+            return binarySearch(num, mid+1, high, searchNo);
+        }
+        
+        // We reach here when element is not present in array
+        return -1;
     }
     
-    if (mid*mid > num) {
-          return squareRoot(num, low,mid,(low + mid)/2);
-    }
-    else if (mid*mid < num) {
-          return squareRoot(num, mid,high,(mid + high)/2);
-    }
-    else {
-        return mid;
-     }
-
- }
+}
 
 int mainHunt(){
     int n;

@@ -250,14 +250,14 @@ void printArr(vector<int> arr){
      for(vector<int>::size_type i = 0; i != arr.size(); i++) {
          cout<<arr[i]<<endl;
     }
-    
- }
+}
+
 void main1(){
     int n;
     int k;
     cin >> n >> k;
     vector<int> a(n);
-     vector<int> cross;
+    vector<int> cross;
     
     int divisibleCount = 0;
     for(int a_i = 0;a_i < n;a_i++){
